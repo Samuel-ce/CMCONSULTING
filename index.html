@@ -4,9 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
+    <!-- Enlazar la fuente de Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8; /* Fondo suave */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 36px;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        /* Párrafo */
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Botón */
+        .button {
+            background-color: #00796b;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #004d40;
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #004d40;
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola, Cómo estás?!</h1>
-    <p>CM CONSULTING te brindará asesoría contable de calidad con profesionales capacitados.</p>  
+    <div class="container">
+        <h1>¡Hola, Cómo estás?!</h1>
+        <p>CM CONSULTING te brindará asesoría contable de calidad con profesionales capacitados.</p>
+        <a href="#" class="button">Contáctanos</a> <!-- Puedes cambiar el link -->
+    </div>
 </body>
 </html>
