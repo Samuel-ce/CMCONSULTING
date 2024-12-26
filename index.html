@@ -12,7 +12,7 @@
         /* Estilos generales */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #40e0d0; /* Fondo turquesa */
+            background-color: #87CEEB; /* Fondo celeste */
             color: #333;
             text-align: center;
             margin: 0;
@@ -21,7 +21,7 @@
         }
         /* Contenedor principal */
         .container {
-            background-color: #ffffff;
+            background-color: #40e0d0; /* Fondo turquesa */
             border-radius: 8px;
             padding: 40px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -32,13 +32,13 @@
         /* Título */
         h1 {
             font-size: 36px;
-            color: #00796b;
+            color: #ffffff; /* Cambiar color de texto a blanco */
             margin-bottom: 20px;
         }
         /* Párrafo */
         p {
             font-size: 18px;
-            color: #555;
+            color: #ffffff;
             line-height: 1.6;
         }
         /* Botón */
@@ -96,7 +96,7 @@
         .instagram-button:hover {
             background-color: #c13584; /* Color de hover de Instagram */
         }
-        /* Estilos para el texto final */
+        /* Estilos para el texto desplegable */
         .footer-text {
             font-size: 16px;
             color: #ffffff;
@@ -104,6 +104,28 @@
             line-height: 1.8;
             padding: 20px;
             max-width: 800px;
+            display: none; /* Ocultar inicialmente */
+            background-color: #00796b; /* Fondo adicional */
+            border-radius: 8px;
+        }
+        .footer-text ul {
+            text-align: left;
+            margin-left: 20px;
+        }
+        /* Botón para desplegar texto */
+        .toggle-button {
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .toggle-button:hover {
+            background-color: #004d40;
         }
     </style>
 </head>
@@ -121,7 +143,8 @@
         </a>
     </div>
 
-    <div class="footer-text">
+    <button class="toggle-button" onclick="toggleIRP()">¿Qué es el IRP?</button>
+    <div class="footer-text" id="irp-info">
         <h2>¿Qué es el IRP?</h2>
         <p>
             El Impuesto a la Renta Personal es aquel que grava las rentas de fuente paraguaya obtenidas por las personas físicas, tales como:
@@ -131,6 +154,16 @@
             <li>Las rentas derivadas de la prestación de servicios personales independientes y en relación de dependencia.</li>
         </ul>
     </div>
+
+    <script>
+        function toggleIRP() {
+            const irpInfo = document.getElementById("irp-info");
+            if (irpInfo.style.display === "none" || !irpInfo.style.display) {
+                irpInfo.style.display = "block";
+            } else {
+                irpInfo.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
-
