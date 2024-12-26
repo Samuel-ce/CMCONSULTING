@@ -6,6 +6,8 @@
     <title>CM CONSULTING</title>
     <!-- Enlazar la fuente de Google Fonts (Roboto) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Enlazar Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos generales */
         body {
@@ -76,6 +78,27 @@
             height: auto;
             border-radius: 8px;
         }
+        /* Estilo para el botón de Instagram */
+        .instagram-button {
+            background-color: #e4405f; /* Color de fondo de Instagram */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .instagram-button i {
+            margin-right: 8px;
+        }
+        .instagram-button:hover {
+            background-color: #c13584; /* Color de hover de Instagram */
+        }
     </style>
 </head>
 <body>
@@ -96,5 +119,13 @@
         <!-- Otro botón que también lleva al enlace de WhatsApp -->
         <a href="https://wa.link/2j720h" class="button">Contáctanos</a>
     </div>
+
+    <!-- Botón de Instagram -->
+    <div class="container">
+        <a href="https://www.instagram.com/mujica_consultingc9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram-button" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos en Instagram
+        </a>
+    </div>
 </body>
 </html>
+
