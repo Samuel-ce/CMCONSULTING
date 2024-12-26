@@ -143,7 +143,7 @@
         </a>
     </div>
 
-    <button class="toggle-button" onclick="toggleIRP()">¿IRP?</button>
+    <button class="toggle-button" onclick="toggleSection('irp-info')">¿IRP?</button>
     <div class="footer-text" id="irp-info">
         <h2>¿Qué es el IRP?</h2>
         <p>
@@ -153,41 +153,35 @@
             <li>Las rentas y ganancias del capital, excluidas las rentas gravadas por el IDU.</li>
             <li>Las rentas derivadas de la prestación de servicios personales independientes y en relación de dependencia.</li>
         </ul>
-      </div>
+    </div>
 
-    <button class="toggle-button" onclick="toggleIRE()">¿IRE?</button>
-    <div class="footer-text" id="irp-info">
+    <button class="toggle-button" onclick="toggleSection('ire-info')">¿IRE?</button>
+    <div class="footer-text" id="ire-info">
         <h2>¿Qué es el IRE?</h2>
         <p>
-           Es el impuesto que grava las rentas, los beneficios o las
-ganancias de fuente paraguaya que provengan de todo po
-de acvidades económicas, primarias, secundarias y
-terciarias, incluidas las agropecuarias, comerciales,
-industriales o de servicios, excluidas aquellas rentas
-gravadas por el IRP.
+            Es el impuesto que grava las rentas, los beneficios o las ganancias de fuente paraguaya que provengan de todo tipo de actividades económicas, primarias, secundarias y terciarias, incluidas las agropecuarias, comerciales, industriales o de servicios, excluidas aquellas rentas gravadas por el IRP.
         </p>
+        <h2>Regímenes del IRE</h2>
         <ul>
-           <h2>RegÍmenes del IRE</h2>
-            <li>El contribuyente del IRE liquidará el impuesto de acuerdo
-con los siguientes regímenes de liquidación:</li>
-            <li1)Régimen General (IREGeneral).</li>
-            <li1)Simplificado para medianas empresas (SIMPLE).</li>
-            <li1)Simplificado para pequeñas empresas (RESIMPLE).</li>
-            <li1)Renta Neta Presunta.</li>
-            <li1)Renta Neta en Operaciones Internacionales.</li>
-            <li1)Regímenes Especiales.</li>
+            <li>Régimen General (IRE General).</li>
+            <li>Simplificado para medianas empresas (SIMPLE).</li>
+            <li>Simplificado para pequeñas empresas (RESIMPLE).</li>
+            <li>Renta Neta Presunta.</li>
+            <li>Renta Neta en Operaciones Internacionales.</li>
+            <li>Regímenes Especiales.</li>
         </ul>
     </div>
 
     <script>
-        function toggleIRP() {
-            const irpInfo = document.getElementById("irp-info");
-            if (irpInfo.style.display === "none" || !irpInfo.style.display) {
-                irpInfo.style.display = "block";
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "none" || !section.style.display) {
+                section.style.display = "block";
             } else {
-                irpInfo.style.display = "none";
+                section.style.display = "none";
             }
         }
     </script>
 </body>
 </html>
+
