@@ -125,6 +125,22 @@
             color: #94a3b8;
             line-height: 1.6;
         }
+
+        .contact-icons {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .contact-icons a:hover {
+            color: #3b82f6;
+        }
     </style>
 </head>
 <body>
@@ -135,9 +151,7 @@
         <nav>
             <a href="#"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
-            <a href="https://wa.me/message/VLY2ARJGK4NEE1" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="https://www.instagram.com/mujica_consultingc9" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fas fa-info-circle"></i> Acerca de</a>
+            <a href="#" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
         </nav>
     </header>
 
@@ -175,8 +189,24 @@
         </div>
     </section>
 
+    <section class="contact-icons" id="contact-icons">
+        <a href="https://wa.me/message/VLY2ARJGK4NEE1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/mujica_consultingc9" target="_blank"><i class="fab fa-instagram"></i></a>
+    </section>
+
     <footer>
         <p>&copy; 2025 CM CONSULTING. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('contact-button').addEventListener('click', function() {
+            const icons = document.getElementById('contact-icons');
+            if (icons.style.display === 'none' || icons.style.display === '') {
+                icons.style.display = 'block';
+            } else {
+                icons.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
