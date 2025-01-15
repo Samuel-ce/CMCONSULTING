@@ -4,186 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM CONSULTING</title>
-    <!-- Enlazar la fuente de Google Fonts (Roboto) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Enlazar Font Awesome para los íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos generales */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #87CEEB; /* Fondo celeste */
-            color: #333;
-            text-align: center;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        /* Contenedor principal */
-        .container {
-            background-color: #ADD8E6; /* Fondo azul claro */
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-        /* Título */
-        h1 {
-            font-size: 36px;
-            color: #ffffff; /* Cambiar color de texto a blanco */
-            margin-bottom: 20px;
-        }
-        /* Párrafo */
-        p {
-            font-size: 18px;
+            background-color: #0f172a; /* Fondo oscuro */
             color: #ffffff;
-            line-height: 1.6;
         }
-        /* Botón */
-        .button {
-            background-color: #00796b;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 30px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #004d40;
-        }
-        /* Estilos para los enlaces */
-        a {
-            color: #00796b;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #004d40;
-        }
-        /* Estilos para la imagen */
-        .image-container {
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        /* Estilo para el botón de Instagram */
-        .instagram-button {
-            background-color: #e4405f; /* Color de fondo de Instagram */
-            color: white;
-            padding: 8px 16px;  /* Botón más pequeño */
-            border: none;
-            border-radius: 30px;
-            font-size: 14px;   /* Fuente más pequeña */
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-decoration: none;
-            display: inline-flex;
+
+        header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 10px;
+            padding: 20px 40px;
+            background-color: #1e293b; /* Fondo más claro */
         }
-        .instagram-button i {
-            margin-right: 8px;
-        }
-        .instagram-button:hover {
-            background-color: #c13584; /* Color de hover de Instagram */
-        }
-        /* Estilos para el texto desplegable */
-        .footer-text {
-            font-size: 16px;
+
+        header a {
             color: #ffffff;
-            margin: 20px auto;
-            line-height: 1.8;
-            padding: 20px;
-            max-width: 800px;
-            display: none; /* Ocultar inicialmente */
-            background-color: #0044cc; /* Fondo azul */
-            border-radius: 8px;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
         }
-        .footer-text ul {
-            text-align: left;
-            margin-left: 20px;
+
+        header a:hover {
+            color: #3b82f6;
         }
-        /* Botón para desplegar texto */
-        .toggle-button {
-            font-size: 20px;
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            background-color: #0f172a;
+        }
+
+        .hero .text {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: #ffffff;
-            background-color: #ADD8E6; /* Fondo azul claro */
-            border: none;
-            border-radius: 30px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero .button {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
             padding: 10px 20px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
         }
-        .toggle-button:hover {
-            background-color: #87CEEB; /* Fondo azul hover */
+
+        .hero .button:hover {
+            background-color: #2563eb;
+        }
+
+        .hero img {
+            max-width: 45%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-container">
-            <img src="https://github.com/Samuel-ce/CMCONSULTING/blob/main/WhatsApp%20Image%202024-11-08%20at%206.00.39%20PM(1).jpeg?raw=true" alt="Imagen de ejemplo">
+    <header>
+        <div class="logo">
+            <h2>CM CONSULTING</h2>
         </div>
-        <h1>Bienvenido a la página de CM CONSULTING</h1>
-        <p>¿Deseas ser contribuyente, estás obligado o ya eres contribuyente?</p>
-        <p>CM CONSULTING te brindará asesoría contable de calidad con profesionales capacitados.</p>
-        <a href="https://wa.me/message/VLY2ARJGK4NEE1" class="button">WhatsApp</a>
-        <a href="https://www.instagram.com/mujica_consultingc9" class="instagram-button" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-    </div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+            <a href="#">Acerca de</a>
+        </nav>
+    </header>
 
-    <button class="toggle-button" onclick="toggleSection('irp-info')">¿IRP?</button>
-    <div class="footer-text" id="irp-info">
-        <h2>¿Qué es el IRP?</h2>
-        <p>
-            El Impuesto a la Renta Personal es aquel que grava las rentas de fuente paraguaya obtenidas por las personas físicas, tales como:
-        </p>
-        <ul>
-            <li>Las rentas y ganancias del capital, excluidas las rentas gravadas por el IDU.</li>
-            <li>Las rentas derivadas de la prestación de servicios personales independientes y en relación de dependencia.</li>
-        </ul>
-    </div>
+    <section class="hero">
+        <div class="text">
+            <h1>Bienvenido a CM CONSULTING</h1>
+            <p>Te ofrecemos asesoría contable de calidad con profesionales capacitados. ¡Conéctate con nosotros hoy mismo!</p>
+            <a href="https://wa.me/message/VLY2ARJGK4NEE1" class="button">Contáctanos</a>
+        </div>
+        <img src="https://github.com/Samuel-ce/CMCONSULTING/blob/main/WhatsApp%20Image%202024-11-08%20at%206.00.39%20PM(1).jpeg?raw=true" alt="Equipo trabajando">
+    </section>
 
-    <button class="toggle-button" onclick="toggleSection('ire-info')">¿IRE?</button>
-    <div class="footer-text" id="ire-info">
-        <h2>¿Qué es el IRE?</h2>
-        <p>
-            Es el impuesto que grava las rentas, los beneficios o las
-            ganancias de fuente paraguaya que provengan de todo tipo
-            de actividades económicas, incluidas agropecuarias, comerciales, industriales o de servicios.
-        </p>
-        <ul>
-            <h2>Regímenes del IRE</h2>
-            <li>Régimen General (IRE General).</li>
-            <li>Simplificado para medianas empresas (SIMPLE).</li>
-            <li>Simplificado para pequeñas empresas (RESIMPLE).</li>
-            <li>Renta Neta Presunta.</li>
-            <li>Renta Neta en Operaciones Internacionales.</li>
-            <li>Regímenes Especiales.</li>
-        </ul>
-    </div>
-
-    <script>
-        function toggleSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section.style.display === "none" || !section.style.display) {
-                section.style.display = "block";
-            } else {
-                section.style.display = "none";
-            }
-        }
-    </script>
+    <footer>
+        <p>&copy; 2025 CM CONSULTING. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
 
