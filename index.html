@@ -26,6 +26,10 @@
             background-color: #1e293b; /* Fondo más claro */
         }
 
+        header nav {
+            display: flex;
+        }
+
         header a {
             color: #ffffff;
             text-decoration: none;
@@ -129,6 +133,7 @@
         .contact-icons {
             display: none;
             margin-top: 20px;
+            text-align: center;
         }
 
         .contact-icons a {
@@ -151,7 +156,7 @@
         <nav>
             <a href="#"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
-            <a href="#" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
+            <a href="#contact-icons" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
         </nav>
     </header>
 
@@ -201,11 +206,8 @@
     <script>
         document.getElementById('contact-button').addEventListener('click', function() {
             const icons = document.getElementById('contact-icons');
-            if (icons.style.display === 'none' || icons.style.display === '') {
-                icons.style.display = 'block';
-            } else {
-                icons.style.display = 'none';
-            }
+            icons.style.display = 'block';
+            icons.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
