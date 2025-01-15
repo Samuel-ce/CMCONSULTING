@@ -24,6 +24,10 @@
             align-items: center;
             padding: 20px 40px;
             background-color: #1e293b; /* Fondo más claro */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         header nav {
@@ -51,7 +55,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 50px 10%;
+            padding: 100px 10% 50px; /* Aumentamos padding-top para compensar el header fijo */
             background-color: #0f172a;
         }
 
@@ -154,7 +158,7 @@
             <h2>CM CONSULTING</h2>
         </div>
         <nav>
-            <a href="#"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#" id="inicio-button"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
             <a href="#contact-icons" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
         </nav>
@@ -197,6 +201,7 @@
     <section class="contact-icons" id="contact-icons">
         <a href="https://wa.me/message/VLY2ARJGK4NEE1" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/mujica_consultingc9" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:consultoramujica@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </section>
 
     <footer>
@@ -208,6 +213,10 @@
             const icons = document.getElementById('contact-icons');
             icons.style.display = 'block';
             icons.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('inicio-button').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
