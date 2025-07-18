@@ -6,7 +6,7 @@
     <title>CM CONSULTING</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome para los íconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -21,18 +21,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 20px 40px 20px 20px;
             background-color: #1e293b;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .menu-toggle {
@@ -42,14 +43,16 @@
             border: none;
             color: white;
             cursor: pointer;
+            margin-left: 10px;
         }
 
         nav {
             display: flex;
-            flex-wrap: wrap;
+            flex-grow: 1;
             justify-content: flex-end;
             align-items: center;
             gap: 15px;
+            padding-right: 10px;
         }
 
         nav a {
@@ -174,6 +177,7 @@
                 width: 100%;
                 display: none;
                 margin-top: 10px;
+                padding-right: 0;
             }
 
             nav.show {
@@ -264,24 +268,23 @@
     </footer>
 
     <script>
-        // Botón de contacto
-        document.getElementById('contact-button').addEventListener('click', function() {
+        // Mostrar contactos
+        document.getElementById('contact-button').addEventListener('click', function () {
             const icons = document.getElementById('contact-icons');
             icons.style.display = 'block';
             icons.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Botón de inicio
-        document.getElementById('inicio-button').addEventListener('click', function() {
+        // Volver al inicio
+        document.getElementById('inicio-button').addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Toggle del menú en móviles
-        document.getElementById('menu-toggle').addEventListener('click', function() {
+        // Menú hamburguesa
+        document.getElementById('menu-toggle').addEventListener('click', function () {
             const nav = document.getElementById('nav');
             nav.classList.toggle('show');
         });
     </script>
 </body>
 </html>
-
