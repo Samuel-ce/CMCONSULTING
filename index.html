@@ -21,32 +21,52 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 20px 5%;
             background-color: #1e293b;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            flex-wrap: wrap;
         }
 
-        header nav {
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
         }
 
-        header a {
+        nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
+            white-space: nowrap;
+            font-size: 0.95rem;
         }
 
-        header a:hover {
+        nav a:hover {
             color: #3b82f6;
         }
 
-        header a i {
+        nav a i {
             margin-right: 8px;
         }
 
@@ -56,6 +76,7 @@
             justify-content: space-between;
             padding: 100px 10% 50px;
             background-color: #0f172a;
+            flex-wrap: wrap;
         }
 
         .hero .text {
@@ -65,7 +86,6 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #ffffff;
         }
 
         .hero p {
@@ -111,7 +131,6 @@
         .services h2 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: #ffffff;
             text-align: center;
         }
 
@@ -124,7 +143,6 @@
 
         .service h3 {
             font-size: 1.5rem;
-            color: #ffffff;
             margin-bottom: 10px;
         }
 
@@ -149,14 +167,39 @@
         .contact-icons a:hover {
             color: #3b82f6;
         }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                margin-top: 10px;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero .text, .hero img {
+                max-width: 100%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h2>CM CONSULTING</h2>
-        </div>
-        <nav>
+        <div class="logo">CM CONSULTING</div>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="nav">
             <a href="#" id="inicio-button"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
             <a href="#gestiones"><i class="fas fa-tasks"></i> Gestiones</a>
@@ -221,15 +264,24 @@
     </footer>
 
     <script>
+        // Botón de contacto
         document.getElementById('contact-button').addEventListener('click', function() {
             const icons = document.getElementById('contact-icons');
             icons.style.display = 'block';
             icons.scrollIntoView({ behavior: 'smooth' });
         });
 
+        // Botón de inicio
         document.getElementById('inicio-button').addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Toggle del menú en móviles
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('show');
         });
     </script>
 </body>
 </html>
+
