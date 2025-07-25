@@ -22,13 +22,11 @@
             --card-bg: #1e293b;
             --transition: all 0.3s ease;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--secondary);
@@ -36,7 +34,6 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         /* Header Styles */
         header {
             display: flex;
@@ -51,23 +48,21 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
-
         header.scrolled {
             padding: 15px 5%;
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
         }
-
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--accent), var(--primary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        .logo-image {
+            height: 50px; /* Ajusta este valor según el tamaño deseado */
+            width: auto;
+            transition: var(--transition);
+        }
         .menu-toggle {
             display: none;
             font-size: 1.8rem;
@@ -78,11 +73,9 @@
             margin-left: 10px;
             transition: var(--transition);
         }
-
         .menu-toggle:hover {
             color: var(--accent);
         }
-
         nav {
             display: flex;
             flex-grow: 1;
@@ -90,7 +83,6 @@
             align-items: center;
             gap: 5px;
         }
-
         nav a {
             color: var(--light);
             text-decoration: none;
@@ -104,22 +96,18 @@
             transition: var(--transition);
             position: relative;
         }
-
         nav a:hover {
             color: var(--accent);
             background: rgba(59, 130, 246, 0.1);
         }
-
         nav a.active {
             color: var(--accent);
             background: rgba(59, 130, 246, 0.15);
         }
-
         nav a i {
             margin-right: 8px;
             font-size: 1.1rem;
         }
-
         /* Hero Section */
         .hero {
             display: flex;
@@ -131,7 +119,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: "";
             position: absolute;
@@ -142,12 +129,10 @@
             background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
             z-index: -1;
         }
-
         .hero .text {
             max-width: 50%;
             animation: fadeInLeft 1s ease;
         }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
@@ -157,14 +142,12 @@
             background-clip: text;
             color: transparent;
         }
-
         .hero p {
             font-size: 1.25rem;
             color: var(--gray);
             margin-bottom: 30px;
             max-width: 90%;
         }
-
         .hero .button {
             display: inline-block;
             background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -179,13 +162,11 @@
             border: none;
             cursor: pointer;
         }
-
         .hero .button:hover {
             background: linear-gradient(90deg, var(--primary-dark), var(--primary));
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
-
         .hero img {
             max-width: 45%;
             border-radius: 16px;
@@ -193,25 +174,21 @@
             animation: fadeInRight 1s ease;
             border: 3px solid rgba(59, 130, 246, 0.2);
         }
-
         /* Services Section */
         .services {
             padding: 80px 10%;
             background-color: var(--card-bg);
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 50px;
             position: relative;
         }
-
         .section-title h2 {
             font-size: 2.5rem;
             margin-bottom: 15px;
             color: var(--light);
         }
-
         .section-title::after {
             content: "";
             display: block;
@@ -221,21 +198,18 @@
             margin: 15px auto;
             border-radius: 2px;
         }
-
         .section-title p {
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
-
         .service {
             background: linear-gradient(145deg, #1e293b, #0f172a);
             padding: 30px;
@@ -244,48 +218,95 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(59, 130, 246, 0.1);
         }
-
         .service:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
             border-color: rgba(59, 130, 246, 0.3);
         }
-
         .service-icon {
             font-size: 2.5rem;
             color: var(--accent);
             margin-bottom: 20px;
         }
-
         .service h3 {
             font-size: 1.6rem;
             margin-bottom: 15px;
             color: var(--light);
         }
-
         .service p {
             color: var(--gray);
             line-height: 1.7;
             margin-bottom: 20px;
         }
-
         .service ul {
             padding-left: 20px;
             margin-bottom: 20px;
         }
-
         .service li {
             margin-bottom: 10px;
             color: var(--gray);
         }
-
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 10%;
+            background-color: var(--card-bg);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 30px;
+            border-radius: 16px;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .testimonial-quote {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .testimonial-quote i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin: 0 5px;
+        }
+        .testimonial-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .testimonial-details strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+        .testimonial-details span {
+            font-size: 1rem;
+            color: var(--gray);
+        }
         /* Contact Section */
         .contact-section {
             padding: 80px 10%;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             text-align: center;
         }
-
         .contact-icons {
             display: flex;
             justify-content: center;
@@ -293,7 +314,6 @@
             margin-top: 40px;
             flex-wrap: wrap;
         }
-
         .contact-icons a {
             display: flex;
             align-items: center;
@@ -309,26 +329,21 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(59, 130, 246, 0.2);
         }
-
         .contact-icons a:hover {
             transform: translateY(-8px);
             color: var(--accent);
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
             background: linear-gradient(145deg, #0f172a, #1e293b);
         }
-
         .contact-icons a.whatsapp:hover {
             color: #25d366;
         }
-
         .contact-icons a.instagram:hover {
             color: #e1306c;
         }
-
         .contact-icons a.email:hover {
             color: #ea4335;
         }
-
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -338,12 +353,10 @@
             font-size: 1rem;
             border-top: 1px solid rgba(59, 130, 246, 0.1);
         }
-
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .footer-logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -353,7 +366,6 @@
             background-clip: text;
             color: transparent;
         }
-
         /* Animations */
         @keyframes fadeInLeft {
             from {
@@ -365,7 +377,6 @@
                 transform: translateX(0);
             }
         }
-
         @keyframes fadeInRight {
             from {
                 opacity: 0;
@@ -376,7 +387,6 @@
                 transform: translateX(0);
             }
         }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -387,7 +397,6 @@
                 transform: translateY(0);
             }
         }
-
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero {
@@ -396,29 +405,23 @@
                 padding-top: 120px;
                 padding-bottom: 60px;
             }
-
             .hero .text, .hero img {
                 max-width: 100%;
             }
-
             .hero .text {
                 margin-bottom: 40px;
             }
-
             .hero h1 {
                 font-size: 2.8rem;
             }
-
             .hero p {
                 max-width: 100%;
             }
         }
-
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
             }
-
             nav {
                 position: fixed;
                 top: 80px;
@@ -432,53 +435,42 @@
                 transition: var(--transition);
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
             }
-
             nav.show {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
-
             nav a {
                 width: 90%;
                 text-align: center;
                 margin: 5px 0;
                 padding: 15px;
             }
-
             .hero h1 {
                 font-size: 2.3rem;
             }
-
             .hero p {
                 font-size: 1.1rem;
             }
-
             .section-title h2 {
                 font-size: 2rem;
             }
-
             .service-grid {
                 grid-template-columns: 1fr;
             }
         }
-
         @media (max-width: 480px) {
             .hero {
                 padding: 110px 5% 50px;
             }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero .button {
                 padding: 12px 25px;
                 font-size: 1rem;
             }
-
             .section-title h2 {
                 font-size: 1.8rem;
             }
-
             .contact-icons a {
                 width: 70px;
                 height: 70px;
@@ -489,25 +481,26 @@
 </head>
 <body>
     <header id="header">
-        <div class="logo">CM CONSULTING</div>
+        <div class="logo">
+            <img src="https://github.com/Samuel-ce/CMCONSULTING/blob/main/WhatsApp%20Image%202024-11-08%20at%206.00.39%20PM%20(1).jpeg?raw=true" alt="Logo de CM Consulting" class="logo-image">
+        </div>
         <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
         <nav id="nav">
             <a href="#" id="inicio-button" class="active"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
             <a href="#gestiones"><i class="fas fa-tasks"></i> Gestiones</a>
+            <a href="#testimonials"><i class="fas fa-comment-dots"></i> Opiniones</a>
             <a href="#contact" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
         </nav>
     </header>
-
     <section class="hero">
         <div class="text">
             <h1>Asesoría Contable Profesional</h1>
             <p>Te ofrecemos soluciones fiscales y contables de calidad con profesionales capacitados. ¡Conéctate con nosotros hoy mismo!</p>
             <a href="https://wa.me/message/VLY2ARJGK4NEE1" class="button">Contáctanos</a>
         </div>
-        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Equipo trabajando">
+        <img src="image.png" alt="Equipo trabajando">
     </section>
-
     <section class="services" id="services">
         <div class="section-title">
             <h2>Servicios de Impuestos</h2>
@@ -543,7 +536,6 @@
             </div>
         </div>
     </section>
-
     <section class="services" id="gestiones">
         <div class="section-title">
             <h2>Gestiones Tributarias</h2>
@@ -566,7 +558,57 @@
             </div>
         </div>
     </section>
-
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Opiniones de Clientes</h2>
+            <p>Lo que dicen nuestros clientes sobre nuestros servicios</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Excelente servicio, me ayudaron a resolver mis pendientes con la DNIT de manera rápida y profesional. Muy recomendados.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-info">
+                    <img src="https://via.placeholder.com/50?text=Cliente+1" alt="Cliente 1" class="testimonial-avatar">
+                    <div class="testimonial-details">
+                        <strong>Carlos Mendoza</strong>
+                        <span>Empresario</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>La asesoría contable de CM Consulting me ha permitido optimizar mis impuestos y ahorrar costos significativos. Totalmente satisfecho.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-info">
+                    <img src="https://via.placeholder.com/50?text=Cliente+2" alt="Cliente 2" class="testimonial-avatar">
+                    <div class="testimonial-details">
+                        <strong>Laura González</strong>
+                        <span>Consultora</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Profesionales muy atentos y competentes. Me guiaron en todo el proceso de inscripción de mi empresa. 100% recomendado.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-info">
+                    <img src="https://via.placeholder.com/50?text=Cliente+3" alt="Cliente 3" class="testimonial-avatar">
+                    <div class="testimonial-details">
+                        <strong>Miguel Ángel</strong>
+                        <span>Freelancer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contact-section" id="contact">
         <div class="section-title">
             <h2>Contáctanos</h2>
@@ -584,7 +626,6 @@
             </a>
         </div>
     </section>
-
     <footer>
         <div class="footer-content">
             <div class="footer-logo">CM CONSULTING</div>
@@ -592,7 +633,6 @@
             <p>Asesoría contable profesional en Paraguay</p>
         </div>
     </footer>
-
     <script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
@@ -603,7 +643,6 @@
                 header.classList.remove('scrolled');
             }
         });
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -614,11 +653,9 @@
                         top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
                     // Close mobile menu if open
                     const nav = document.getElementById('nav');
                     nav.classList.remove('show');
-                    
                     // Update active link
                     document.querySelectorAll('nav a').forEach(link => {
                         link.classList.remove('active');
@@ -627,39 +664,31 @@
                 }
             });
         });
-
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const nav = document.getElementById('nav');
             nav.classList.toggle('show');
         });
-
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.getElementById('nav');
             const menuToggle = document.getElementById('menu-toggle');
-            
             if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
                 nav.classList.remove('show');
             }
         });
-
         // Set active link based on scroll position
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
-            
             let current = '';
-            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
                 if (pageYOffset >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
-            
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
