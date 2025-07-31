@@ -59,7 +59,7 @@
             justify-content: center;
         }
         .logo-image {
-            height: 50px; /* Ajusta este valor según el tamaño deseado */
+            height: 50px;
             width: auto;
             transition: var(--transition);
         }
@@ -486,14 +486,15 @@
         </div>
         <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
         <nav id="nav">
-            <a href="#" id="inicio-button" class="active"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#hero" id="inicio-button" class="active"><i class="fas fa-home"></i> Inicio</a>
             <a href="#services"><i class="fas fa-file-invoice"></i> Impuestos</a>
             <a href="#gestiones"><i class="fas fa-tasks"></i> Gestiones</a>
             <a href="#testimonials"><i class="fas fa-comment-dots"></i> Opiniones</a>
             <a href="#contact" id="contact-button"><i class="fas fa-info-circle"></i> Contacto</a>
         </nav>
     </header>
-    <section class="hero">
+
+    <section class="hero" id="hero">
         <div class="text">
             <h1>Asesoría Contable Profesional</h1>
             <p>Te ofrecemos soluciones fiscales y contables de calidad con profesionales capacitados. ¡Conéctate con nosotros hoy mismo!</p>
@@ -501,6 +502,7 @@
         </div>
         <img src="image.png" alt="Equipo trabajando">
     </section>
+
     <section class="services" id="services">
         <div class="section-title">
             <h2>Servicios de Impuestos</h2>
@@ -536,6 +538,7 @@
             </div>
         </div>
     </section>
+
     <section class="services" id="gestiones">
         <div class="section-title">
             <h2>Gestiones Tributarias</h2>
@@ -558,6 +561,7 @@
             </div>
         </div>
     </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="section-title">
@@ -609,6 +613,7 @@
             </div>
         </div>
     </section>
+
     <section class="contact-section" id="contact">
         <div class="section-title">
             <h2>Contáctanos</h2>
@@ -626,6 +631,7 @@
             </a>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo">CM CONSULTING</div>
@@ -633,6 +639,7 @@
             <p>Asesoría contable profesional en Paraguay</p>
         </div>
     </footer>
+
     <script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
@@ -643,6 +650,7 @@
                 header.classList.remove('scrolled');
             }
         });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -664,11 +672,13 @@
                 }
             });
         });
+
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const nav = document.getElementById('nav');
             nav.classList.toggle('show');
         });
+
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.getElementById('nav');
@@ -677,6 +687,7 @@
                 nav.classList.remove('show');
             }
         });
+
         // Set active link based on scroll position
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
